@@ -36,13 +36,3 @@ steps:
     apksignerKeyPassword: $(key.password)
     apksignerArguments: --out $(outputDirectory)/app.release.apk
     zipalign: true
-
-- task: AppCenterDistribute@3
-  inputs:
-    serverEndpoint: 'VSAC'
-    appSlug: '$(appSlug)'
-    appFile: '$(outputDirectory)/app.release.apk'
-    releaseNotesOption: 'input'
-    releaseNotesInput: 'New version'
-    destinationType: 'groups'
-    distributionGroupId: '$(distributionGroupId)'
