@@ -10,7 +10,7 @@ pool:
   vmImage: 'macos-latest'
 
 variables:
-  - group: android-pipeline
+  - group: android-build-variables
 
 steps:
 
